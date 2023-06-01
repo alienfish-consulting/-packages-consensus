@@ -40,7 +40,6 @@
     "eslint-plugin-n": "^15.2.4",
     "eslint-plugin-promise": "^6.0.0",
     "html-webpack-plugin": "^5.5.0",
-    "husky": "^8.0.3",
     "microtime": "^3.1.0",
     "mocha": "^10.0.0",
     "nyc": "^15.1.0",
@@ -76,7 +75,7 @@
     "coverage": "nyc report",
     "build": "./build.sh",
     "docs": "typedoc --excludePrivate --out public/docs ./src/boilerplate.ts && cp -R doc public/docs/",
-    "prepare": "husky install",
+    "prepare": "npm run-script build",
     "benchmark": "npm run build && cd perf && ./benchmark.sh"
   }
 }
