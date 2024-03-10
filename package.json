@@ -1,27 +1,30 @@
 {
-  "name": "leeallen/ts-boilerplate",
-  "version": "1.0.1",
-  "description": "My standard boilerplate for Typescript package development or random prototyping.",
-  "homepage": "https://github.com/TerryLeeAllenJr/ts-boilerplate",
-  "author": "Terry Lee Allen, Jr <lee.allen.sc@gmail.comh> (https://lee-allen.com/)",
-  "main": "dist/cjs/boilerplate.js",
-  "module": "dist/esm/boilerplate.js",
-  "types": "./dist/esm/boilerplate.d.ts",
+  "name": "@plugins/consensus",
+  "version": "1.0.0",
+  "description": "A typescript library for parsing survey validation, consensus, and scoring data.",
+  "homepage": "https://github.com/AlienFishConsulting/consensus",
+  "author": "Terry Lee Allen, Jr <lee@alienfishconsulting.com>",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "./dist/esm/index.d.ts",
   "exports": {
-    "require": "./dist/cjs/boilerplate.js",
-    "import": "./dist/esm/boilerplate.js"
+    "require": "./dist/cjs/index.js",
+    "import": "./dist/esm/index.js"
   },
   "sideEffects": false,
   "files": [
     "dist/esm/package.json",
-    "dist/esm/boilerplate.js",
-    "dist/esm/boilerplate.js.map",
-    "dist/esm/boilerplate.d.ts",
-    "dist/cjs/boilerplate.js",
-    "dist/cjs/boilerplate.js.map",
-    "dist/cjs/boilerplate.d.ts",
-    "src/lib/boilerplate.ts"
+    "dist/esm/index.js",
+    "dist/esm/index.js.map",
+    "dist/esm/index.d.ts",
+    "dist/cjs/index.js",
+    "dist/cjs/index.js.map",
+    "dist/cjs/index.d.ts",
+    "src/lib/index.ts"
   ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "devDependencies": {
     "@istanbuljs/nyc-config-typescript": "^1.0.2",
     "@parcel/packager-ts": "^2.6.2",
@@ -53,25 +56,26 @@
     "webpack-cli": "^4.10.0"
   },
   "bugs": {
-    "url": "https://github.com/TerryLeeAllenJr/ts-boilerplate/issues"
+    "url": "https://github.com/TerryLeeAllenJr/consensus/issues"
   },
   "keywords": [
     "typescript",
-    "boilerplate",
-    "mocha",
-    "chai",
-    "webpack",
-    "parcel",
-    "typodoc"
+    "machine-learning",
+    "openai",
+    "surveys",
+    "sentiment",
+    "natural language",
+    "gpt",
+    "consensus"
   ],
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/TerryLeeAllenJr/ts-boilerplatek.git"
+    "url": "https://github.com/TerryLeeAllenJr/consensus.git"
   },
   "scripts": {
     "dev:gui": "parcel ./gui/gui.html",
-    "test": "eslint ./src/boilerplate.ts && nyc mocha",
+    "test": "eslint ./src/index.ts && nyc mocha",
     "coverage": "nyc report",
     "build": "./build.sh",
     "docs": "typedoc --excludePrivate --out public/docs ./src/boilerplate.ts && cp -R doc public/docs/",
